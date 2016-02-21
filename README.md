@@ -7,7 +7,7 @@
 
 A loader that looks like the iOS Apple Store application.
 
-❕**It's smoother on a real app.**
+❗️❕**It's smoother on a real app.**
 
 ## Requirements
 
