@@ -2,7 +2,7 @@
 
 [![Language](https://img.shields.io/badge/language-swift-orange.svg)](#)
 
-<img src="loaderSquare.gif" width="250"/>
+<img src="loaderFixedSquare.gif" width="250"/>
 <img src="loaderCircle.gif" width="250"/>
 
 A loader that looks like the iOS Apple Store application.
