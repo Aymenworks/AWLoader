@@ -7,6 +7,8 @@
 
 A loader that looks like the iOS Apple Store application.
 
+**❕ : It's smoother on a real app. The gifs are slow**
+
 ## Requirements
 
 ```swift
