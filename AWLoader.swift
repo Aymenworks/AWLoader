@@ -104,7 +104,7 @@ class AWLoaderView: UIView {
   }
   
   func setShape(shape: AWLoaderShape) {
-    AWLoader.sharedInstance.shapeView.layer.cornerRadius = AWLoaderProperties.shapeCornierRadius(shape)
+    shapeView.layer.cornerRadius = AWLoaderProperties.shapeCornierRadius(shape)
   }
   
   // MARK: - Animations -
