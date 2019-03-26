@@ -115,7 +115,7 @@ class AWLoaderView: UIView {
     
     func recursiveAnimate() {
       UIView.animate(withDuration: 0.4, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
-        self.containerShapeView.transform.rotated(by: CGFloat(Double.pi / 2))
+        self.containerShapeView.transform = self.containerShapeView.transform.rotated(by: CGFloat(Double.pi / 2))
       }, completion: {
         if $0 {
           recursiveAnimate()
