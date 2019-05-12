@@ -89,11 +89,11 @@ public init(showInView presentingView: UIView,
 
 ### CocoaPods
 
-```pod 'AWStepBar'```
+```pod 'AWLoader'```
 
 ### Carthage
 
-```github "Aymenworks/AWStepBar"```
+```github "Aymenworks/AWLoader"```
 
 
 ## License
