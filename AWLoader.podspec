@@ -1,15 +1,17 @@
 Pod::Spec.new do |s|
   s.name         = "AWLoader"
-  s.version      = "0.0.1"
-  s.summary      = "A loader that is similar to the iOS App Store application."
+  s.version      = "1.0.0"
+  s.summary      = "AWLoader is a UI  Compoonent that allows you to integrate a loader that fits your needs within your app."
   s.description  = <<-DESC
-A iOS loader that is similar to Apple applications
+AWLoader is a UI  Compoonent that allows you to integrate a loader that fits your needs within your app."
                    DESC
   s.homepage     = "https://github.com/Aymenworks/AWLoader"
   s.license      = { :type => "MIT", :file => "LICENSE" }
-  s.author             = { "Aymen Rebouh" => "Aymen.Rebouh@mines-ales.org" }
-  s.platform     = :ios, "8.0"
-  s.source       = { :git => "https://github.com/Aymenworks/AWLoader.git" }
-  s.source_files  = "AWLoader.swift"
-  s.exclude_files = "*.gif"
+  s.author       = { "Aymen Rebouh" => "aymenmse@gmail.com" }
+  s.requires_arc = true
+  s.ios.deployment_target = '9.0'
+  s.source       = { :git => "https://github.com/Aymenworks/AWLoader.git", :tag => "#{s.version}" }
+  s.source_files  = ['AWLoader/**/*.{swift,h}']
+  s.public_header_files = 'AWLoader/**/*.h'
+  s.social_media_url   = "https://twitter.com/aymenworks"
 end
