@@ -57,6 +57,12 @@ DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
 }
 ```
 
+If you want the loader to not be a modal meaning not blocking the background content,  you can still do: 
+```swift
+gradientLoader.isUserInteractionEnabled = false
+```
+
+
 ## Installation
 
 ### CocoaPods
