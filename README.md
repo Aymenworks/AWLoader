@@ -1,47 +1,102 @@
 # AWLoader
+ 
+AWLoader is a UI  Compoonent that allows you to integratea loader that fits your needs within your app.
 
-[![Language](https://img.shields.io/badge/language-swift-orange.svg)](#)
+## Overview
 
-<img src="loaderFixedSquare.gif" width="250"/>
-<img src="loaderCircle.gif" width="250"/>
+### Appareance
 
-A loader that looks like the iOS Apple Store application.
+![AWLoader all gif](./AWLoader-all.gif)
+![AWLoader global gif](./AWLoader-view.gif)
 
-❗️❕**It's smoother on a real app.**
+###  Behind the scenes
 
-## Requirements
+As simple as:
+![Whimsical AWLoader](./AWLoaderWhimsical.png)
 
+## 🔶 Requirements
+
+- iOS 9.0+
+- Swift 5.0
+
+## 👨🏻‍💻 Usage
+
+### Normal loader
+
+#### Usage
 ```swift
-guard ios >= 8  else { return }
+let loader = AWLoader(showInView: view,
+                      animationDuration: 1,
+                      blurStyle: .light,
+                      shape: .rounded(6),
+                      containerBackgroundColor: .white,
+                      lineWidth: 2,
+                      lineColor: .darkGray)
+loader.show()
+
+DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+    loader.hide()
+}
+```
+
+#### Customization
+
+Those properties:
+```swift
+public init(showInView presentingView: UIView,
+                animationDuration: CFTimeInterval = 1.5,
+                blurStyle: UIBlurEffect.Style? = .light,
+                shape: AWLoaderShape = .rounded(6),
+                containerBackgroundColor: UIColor = .lightGray,
+                lineWidth: CGFloat = 2,
+                lineColor: UIColor = .black
+                )
+```
+
+### Gradient loader
+
+#### Usage
+```swift
+let gradientLoader = AWGradientLoader(showInView: self.view,
+                                      animationDuration: 0.7,
+                                      blurStyle: .dark,
+                                      shape: .rounded(6),
+                                      containerBackgroundColor: .white,
+                                      gradientColors: [.purple, .black, .purple],
+                                      gradientLocations: [0.2, 0.5, 1])
+gradientLoader.show()
+
+DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+    gradientLoader.hide()
+}
+```
+
+#### Customization
+
+Those properties:
+```swift
+public init(showInView presentingView: UIView,
+              animationDuration: CFTimeInterval = 1.5,
+              blurStyle: UIBlurEffect.Style? = nil,
+              shape: AWLoaderShape = .circle,
+              containerBackgroundColor: UIColor = .lightGray,
+              lineWidth: CGFloat = 2,
+              gradientColors: [UIColor],
+              gradientLocations: [NSNumber]
+      )
 ```
 
 ## Installation
 
-### Manually
+### CocoaPods
 
-Simply drag and drop the `AWLoader.swift` file to your project.
+```pod 'AWStepBar'```
 
-## Usage
+### Carthage
 
-To show the loader, use the following code :
+```github "Aymenworks/AWStepBar"```
 
-```swift
-AWLoader.show()
-AWLoader.hide()
-```
-
-It's also customizable, you can change the blur style ( ExtraLight, Light and Dark ) as well as the shape of the loader ( Circle or Square by default )
-
-```swift
-AWLoader.show(blurStyle: .Dark, shape: .Circle)
-```
-
-## Author
-
-Rebouh Aymen, aymenworks@gmail.com
-
-Twitter [@aymenworks](https://twitter.com/aymenworks)
 
 ## License
 
-AWLoader is available under the MIT license. See the LICENSE file for more info.
+AWStepBar is released under the MIT license.
