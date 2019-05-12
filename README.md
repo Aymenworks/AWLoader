@@ -7,7 +7,6 @@ AWLoader is a UI  Compoonent that allows you to integratea loader that fits your
 ### Appareance
 
 ![AWLoader all gif](./AWLoader-all.gif)
-![AWLoader global gif](./AWLoader-view.gif)
 
 ###  Behind the scenes
 
