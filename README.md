@@ -1,6 +1,6 @@
 # AWLoader
  
-AWLoader is a UI  Compoonent that allows you to integrate loader that fits your needs within your app.
+AWLoader is a UI  Component that allows you to integrate loader that fits your needs within your app.
 
 ## Overview
 
