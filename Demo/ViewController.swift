@@ -16,36 +16,36 @@ class ViewController: UIViewController {
     let scrollView = UIScrollView()
     let stackView = UIStackView()
     
-    let loadersConfiguration: [(title: String, loaders: [(demoViewBackgroundColor: UIColor, blurStyle:  UIBlurEffect.Style?, shape: AWLoaderShape, containerBackgroundColor: UIColor, lineWidth: CGFloat, lineColor: UIColor )])] = [
+    let loadersConfiguration: [(title: String, loaders: [(demoViewBackgroundColor: UIColor, blurStyle:  UIBlurEffect.Style?, shape: AWLoaderShape, containerBackgroundColor: UIColor, lineWidth: CGFloat, strokeColor: UIColor )])] = [
         (title: "Container Shapes: round, circle, none",
             [
-                (demoViewBackgroundColor: .white, blurStyle: nil, shape: .rounded(6), containerBackgroundColor: .lightGray, lineWidth: 2, lineColor: .white),
-                (demoViewBackgroundColor: .white, blurStyle: nil, shape: .circle, containerBackgroundColor: .lightGray, lineWidth: 2, lineColor: .white),
-                (demoViewBackgroundColor: .white, blurStyle: nil, shape: .none, containerBackgroundColor: .clear, lineWidth: 2, lineColor: .lightGray)
+                (demoViewBackgroundColor: .white, blurStyle: nil, shape: .rounded(6), containerBackgroundColor: .lightGray, lineWidth: 2, strokeColor: .white),
+                (demoViewBackgroundColor: .white, blurStyle: nil, shape: .circle, containerBackgroundColor: .lightGray, lineWidth: 2, strokeColor: .white),
+                (demoViewBackgroundColor: .white, blurStyle: nil, shape: .none, containerBackgroundColor: .clear, lineWidth: 2, strokeColor: .lightGray)
             ]
         ),
         (title: "Blur effect: light, extraLight dark, none..",
          [
-            (demoViewBackgroundColor: #colorLiteral(red: 0.9254901961, green: 0.7294117647, blue: 0.2745098039, alpha: 1), blurStyle: .light, shape: .rounded(6), containerBackgroundColor: .white, lineWidth: 2, lineColor: .lightGray),
-            (demoViewBackgroundColor: #colorLiteral(red: 0.9254901961, green: 0.7294117647, blue: 0.2745098039, alpha: 1), blurStyle: .extraLight, shape: .rounded(6), containerBackgroundColor: .white, lineWidth: 2, lineColor: .lightGray),
-            (demoViewBackgroundColor: #colorLiteral(red: 0.9254901961, green: 0.7294117647, blue: 0.2745098039, alpha: 1), blurStyle: .dark, shape: .rounded(6), containerBackgroundColor: .white, lineWidth: 2, lineColor: .lightGray),
-            (demoViewBackgroundColor: #colorLiteral(red: 0.9254901961, green: 0.7294117647, blue: 0.2745098039, alpha: 1), blurStyle: nil, shape: .rounded(6), containerBackgroundColor: .white, lineWidth: 2, lineColor: .lightGray)
+            (demoViewBackgroundColor: #colorLiteral(red: 0.9254901961, green: 0.7294117647, blue: 0.2745098039, alpha: 1), blurStyle: .light, shape: .rounded(6), containerBackgroundColor: .white, lineWidth: 2, strokeColor: .lightGray),
+            (demoViewBackgroundColor: #colorLiteral(red: 0.9254901961, green: 0.7294117647, blue: 0.2745098039, alpha: 1), blurStyle: .extraLight, shape: .rounded(6), containerBackgroundColor: .white, lineWidth: 2, strokeColor: .lightGray),
+            (demoViewBackgroundColor: #colorLiteral(red: 0.9254901961, green: 0.7294117647, blue: 0.2745098039, alpha: 1), blurStyle: .dark, shape: .rounded(6), containerBackgroundColor: .white, lineWidth: 2, strokeColor: .lightGray),
+            (demoViewBackgroundColor: #colorLiteral(red: 0.9254901961, green: 0.7294117647, blue: 0.2745098039, alpha: 1), blurStyle: nil, shape: .rounded(6), containerBackgroundColor: .white, lineWidth: 2, strokeColor: .lightGray)
             ]
         ),
         (title: "Container backgroundColor and stroke color: pink, red, orange, any",
          [
-            (demoViewBackgroundColor: .white, blurStyle: nil, shape: .rounded(6), containerBackgroundColor: #colorLiteral(red: 0.9294117647, green: 0.5215686275, blue: 0.568627451, alpha: 1), lineWidth: 2, lineColor: #colorLiteral(red: 0.968627451, green: 0.8274509804, blue: 0.6666666667, alpha: 1)),
-            (demoViewBackgroundColor: .white, blurStyle: nil, shape: .rounded(6), containerBackgroundColor: .red, lineWidth: 2, lineColor: .white),
-            (demoViewBackgroundColor: .white, blurStyle: nil, shape: .rounded(6), containerBackgroundColor: .orange, lineWidth: 2, lineColor: .black),
-            (demoViewBackgroundColor: .white, blurStyle: nil, shape: .rounded(6), containerBackgroundColor: .black, lineWidth: 2, lineColor: .lightGray)
+            (demoViewBackgroundColor: .white, blurStyle: nil, shape: .rounded(6), containerBackgroundColor: #colorLiteral(red: 0.9294117647, green: 0.5215686275, blue: 0.568627451, alpha: 1), lineWidth: 2, strokeColor: #colorLiteral(red: 0.968627451, green: 0.8274509804, blue: 0.6666666667, alpha: 1)),
+            (demoViewBackgroundColor: .white, blurStyle: nil, shape: .rounded(6), containerBackgroundColor: .red, lineWidth: 2, strokeColor: .white),
+            (demoViewBackgroundColor: .white, blurStyle: nil, shape: .rounded(6), containerBackgroundColor: .orange, lineWidth: 2, strokeColor: .black),
+            (demoViewBackgroundColor: .white, blurStyle: nil, shape: .rounded(6), containerBackgroundColor: .black, lineWidth: 2, strokeColor: .lightGray)
             ]
         ),
         (title: "Stroke width",
          [
-            (demoViewBackgroundColor: .white, blurStyle: nil, shape: .rounded(6), containerBackgroundColor: .clear, lineWidth: 1, lineColor: .gray),
-            (demoViewBackgroundColor: .white, blurStyle: nil, shape: .rounded(6), containerBackgroundColor: .clear, lineWidth: 3, lineColor: .gray),
-            (demoViewBackgroundColor: .white, blurStyle: nil, shape: .rounded(6), containerBackgroundColor: .clear, lineWidth: 5, lineColor: .gray),
-            (demoViewBackgroundColor: .white, blurStyle: nil, shape: .rounded(6), containerBackgroundColor: .clear, lineWidth: 10, lineColor: .gray)
+            (demoViewBackgroundColor: .white, blurStyle: nil, shape: .rounded(6), containerBackgroundColor: .clear, lineWidth: 1, strokeColor: .gray),
+            (demoViewBackgroundColor: .white, blurStyle: nil, shape: .rounded(6), containerBackgroundColor: .clear, lineWidth: 3, strokeColor: .gray),
+            (demoViewBackgroundColor: .white, blurStyle: nil, shape: .rounded(6), containerBackgroundColor: .clear, lineWidth: 5, strokeColor: .gray),
+            (demoViewBackgroundColor: .white, blurStyle: nil, shape: .rounded(6), containerBackgroundColor: .clear, lineWidth: 10, strokeColor: .gray)
             ]
         )
     ]
@@ -91,9 +91,10 @@ class ViewController: UIViewController {
         stackView.axis = .vertical
         stackView.spacing = 20
         
-        let globalLoaderButton = UIButton(type: .custom)
+        let globalLoaderButton = UIButton()
         globalLoaderButton.setTitle("Loader in view", for: .normal)
         globalLoaderButton.setTitleColor(.blue, for: .normal)
+        globalLoaderButton.setTitleColor(UIColor.blue.withAlphaComponent(0.6), for: .highlighted)
         globalLoaderButton.titleLabel?.font = UIFont.systemFont(ofSize: 24, weight: .heavy)
         globalLoaderButton.addTarget(self, action: #selector(showGlobalLoader), for: .touchUpInside)
         
@@ -130,7 +131,7 @@ class ViewController: UIViewController {
                                       shape: subConfiguration.shape,
                                       containerBackgroundColor: subConfiguration.containerBackgroundColor,
                                       lineWidth: subConfiguration.lineWidth,
-                                      lineColor: subConfiguration.lineColor)
+                                      strokeColor: subConfiguration.strokeColor)
                 
                 loader.show()
             }
@@ -179,11 +180,18 @@ class ViewController: UIViewController {
     }
     
     @objc func showGlobalLoader() {
-        let gloalLoader = AWGradientLoader(showInView: self.view, blurStyle:  .dark, shape: .rounded(6), containerBackgroundColor: .white, gradientColors: [#colorLiteral(red: 0.9294117647, green: 0.5215686275, blue: 0.568627451, alpha: 1), #colorLiteral(red: 0.968627451, green: 0.8274509804, blue: 0.6666666667, alpha: 1), #colorLiteral(red: 0.9294117647, green: 0.5215686275, blue: 0.568627451, alpha: 1)], gradientLocations: [0.2, 0.5, 1])
-        gloalLoader.show()
-        
+        let gradientLoader = AWGradientLoader(showInView: self.view,
+                                              animationDuration: 0.7,
+                                              blurStyle: .light,
+                                               shape: .rounded(6),
+                                               containerBackgroundColor: .white,
+                                               gradientColors: [.orange, .black, .yellow],
+                                               gradientLocations: [0.2, 0.5, 1],
+                                               borderWidth: 4)
+        gradientLoader.show()
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            gloalLoader.hide()
+            gradientLoader.hide()
         }
     }
 }

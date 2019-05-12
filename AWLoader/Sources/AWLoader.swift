@@ -44,7 +44,7 @@ public class AWLoader: UIView {
     
     private let lineWidth: CGFloat
     private let shape: AWLoaderShape
-    private let lineColor: UIColor
+    private let strokeColor: UIColor
     private let containerBackgroundColor: UIColor
     private let animationDuration: CFTimeInterval
     private let blurStyle: UIBlurEffect.Style?
@@ -65,14 +65,14 @@ public class AWLoader: UIView {
                 shape: AWLoaderShape = .rounded(6),
                 containerBackgroundColor: UIColor = #colorLiteral(red: 0.9215686275, green: 0.9215686275, blue: 0.9215686275, alpha: 1),
                 lineWidth: CGFloat = 2,
-                lineColor: UIColor = .black
+                strokeColor: UIColor = .black
                 )  {
         
         self.animationDuration = animationDuration
         self.blurStyle = blurStyle
         self.lineWidth = lineWidth
         self.shape = shape
-        self.lineColor = lineColor
+        self.strokeColor = strokeColor
         self.containerBackgroundColor = containerBackgroundColor
 
         super.init(frame: .zero)
@@ -126,7 +126,7 @@ public class AWLoader: UIView {
         containerView.addSubview(shapeContainerView)
         
         circleLayer.fillColor   = nil
-        circleLayer.strokeColor = self.lineColor.cgColor
+        circleLayer.strokeColor = self.strokeColor.cgColor
         circleLayer.lineWidth = self.lineWidth
         circleLayer.strokeStart = 0.0
         circleLayer.strokeEnd   = 0.87

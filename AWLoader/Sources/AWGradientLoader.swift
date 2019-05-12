@@ -38,14 +38,14 @@ public class AWGradientLoader: UIView {
     
     // MARK: Customization - How to customize this component in the init method
     
-    private let lineWidth: CGFloat
     private let shape: AWLoaderShape
     private let gradientColors: [UIColor]
     private let gradientLocations: [NSNumber]
     private let containerBackgroundColor: UIColor
     private let animationDuration: CFTimeInterval
     private let blurStyle: UIBlurEffect.Style?
-    
+    private let borderWidth: CGFloat
+
     // MARK: Private
     
     private weak var presentingView: UIView?
@@ -53,7 +53,7 @@ public class AWGradientLoader: UIView {
     private let containerView = UIView()
     private let shapeContainerView = UIView()
     private let gradientLayer = CAGradientLayer()
-    
+
     // MARK: - Lifecycle
     
     public init(showInView presentingView: UIView,
@@ -61,19 +61,19 @@ public class AWGradientLoader: UIView {
                 blurStyle: UIBlurEffect.Style? = nil,
                 shape: AWLoaderShape = .circle,
                 containerBackgroundColor: UIColor = #colorLiteral(red: 0.9215686275, green: 0.9215686275, blue: 0.9215686275, alpha: 1),
-                lineWidth: CGFloat = 2,
                 gradientColors: [UIColor],
-                gradientLocations: [NSNumber]
+                gradientLocations: [NSNumber],
+                borderWidth: CGFloat = 1
         )  {
         
         self.animationDuration = animationDuration
         self.blurStyle = blurStyle
-        self.lineWidth = lineWidth
         self.shape = shape
+        self.containerBackgroundColor = containerBackgroundColor
         self.gradientColors = gradientColors
         self.gradientLocations = gradientLocations
-        self.containerBackgroundColor = containerBackgroundColor
-        
+        self.borderWidth = borderWidth
+
         super.init(frame: .zero)
         
         self.isHidden = true
@@ -178,15 +178,16 @@ public class AWGradientLoader: UIView {
         
         gradientLayer.frame = shapeContainerView.bounds
         
-        let shapeMask = CAShapeLayer()
-        let path = circlePath
-        path.append(UIBezierPath(arcCenter: center,
-                                 radius: radius/1.1,
+        let gradientShapeMask = CAShapeLayer()
+        let gradientPath = circlePath
+        let approximateBorderWidth: CGFloat = radius / (1 + (borderWidth/10))
+        gradientPath.append(UIBezierPath(arcCenter: center,
+                                 radius: approximateBorderWidth,
                                  startAngle: startAngle,
                                  endAngle: endAngle,
                                  clockwise: false))
-        shapeMask.fillRule = .evenOdd
-        shapeMask.path = path.cgPath
-        gradientLayer.mask = shapeMask
+        gradientShapeMask.fillRule = .evenOdd
+        gradientShapeMask.path = gradientPath.cgPath
+        gradientLayer.mask = gradientShapeMask
     }
 }
