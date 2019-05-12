@@ -30,26 +30,12 @@ let loader = AWLoader(showInView: view,
                       shape: .rounded(6),
                       containerBackgroundColor: .white,
                       lineWidth: 2,
-                      lineColor: .darkGray)
+                      strokeColor: .darkGray)
 loader.show()
 
 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
     loader.hide()
 }
-```
-
-#### Customization
-
-Those properties:
-```swift
-public init(showInView presentingView: UIView,
-                animationDuration: CFTimeInterval = 1.5,
-                blurStyle: UIBlurEffect.Style? = .light,
-                shape: AWLoaderShape = .rounded(6),
-                containerBackgroundColor: UIColor = .lightGray,
-                lineWidth: CGFloat = 2,
-                lineColor: UIColor = .black
-                )
 ```
 
 ### Gradient loader
@@ -62,27 +48,13 @@ let gradientLoader = AWGradientLoader(showInView: self.view,
                                       shape: .rounded(6),
                                       containerBackgroundColor: .white,
                                       gradientColors: [.purple, .black, .purple],
-                                      gradientLocations: [0.2, 0.5, 1])
+                                      gradientLocations: [0.2, 0.5, 1]),
+                                      borderWidth: CGFloat = 1)
 gradientLoader.show()
 
 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
     gradientLoader.hide()
 }
-```
-
-#### Customization
-
-Those properties:
-```swift
-public init(showInView presentingView: UIView,
-              animationDuration: CFTimeInterval = 1.5,
-              blurStyle: UIBlurEffect.Style? = nil,
-              shape: AWLoaderShape = .circle,
-              containerBackgroundColor: UIColor = .lightGray,
-              lineWidth: CGFloat = 2,
-              gradientColors: [UIColor],
-              gradientLocations: [NSNumber]
-      )
 ```
 
 ## Installation
