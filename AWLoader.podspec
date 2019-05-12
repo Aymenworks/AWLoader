@@ -13,5 +13,6 @@ AWLoader is a UI  Compoonent that allows you to integrate a loader that fits you
   s.source       = { :git => "https://github.com/Aymenworks/AWLoader.git", :tag => "#{s.version}" }
   s.source_files  = ['AWLoader/**/*.{swift,h}']
   s.public_header_files = 'AWLoader/**/*.h'
+  s.swift_version = "5.0"
   s.social_media_url   = "https://twitter.com/aymenworks"
 end
