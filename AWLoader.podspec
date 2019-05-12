@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "AWLoader"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "AWLoader is a UI  Compoonent that allows you to integrate a loader that fits your needs within your app."
   s.description  = <<-DESC
 AWLoader is a UI  Compoonent that allows you to integrate a loader that fits your needs within your app."
