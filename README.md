@@ -98,4 +98,4 @@ public init(showInView presentingView: UIView,
 
 ## License
 
-AWStepBar is released under the MIT license.
+AWLoader is released under the MIT license.
