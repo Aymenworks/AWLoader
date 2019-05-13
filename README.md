@@ -48,7 +48,7 @@ let gradientLoader = AWGradientLoader(showInView: self.view,
                                       shape: .rounded(6),
                                       containerBackgroundColor: .white,
                                       gradientColors: [.purple, .black, .purple],
-                                      gradientLocations: [0.2, 0.5, 1]),
+                                      gradientLocations: [0.2, 0.5, 1],
                                       borderWidth: CGFloat = 1)
 gradientLoader.show()
 
